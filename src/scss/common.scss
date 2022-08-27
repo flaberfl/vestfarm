@@ -7,22 +7,13 @@
 
 .title {
   font-size: rem(70);
-  font-weight: 700;
-  line-height: math.div(78, 70);
+  font-weight: 600;
+  line-height: math.div(65, 70);
   color: #fff;
 
   span {
     color: $green-color;
   }
-}
-
-.form {
-
-  /* .form__input */
-  &__input {}
-
-  /* .form__button */
-  &__button {}
 }
 
 // .body-grid {

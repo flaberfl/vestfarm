@@ -1,19 +1,46 @@
 //<FORM>
 // Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
+	display: flex;
+	max-width: rem(533);
+	padding: rem(6);
+	gap: rem(5);
+	position: relative;
+
+	border-radius: rem(10);
+	background-color: #fff;
+
+	&__row {}
+
+	&__column {}
+
+	&__line {}
+
 	&__input {
+		flex: 1 1 auto;
+		padding: rem(20);
+
+		font-weight: 500;
+		color: #263238;
+
+		&::placeholder {
+			color: #263238;
+		}
 	}
-	&__button {
-	}
+
+	&__button {}
+
 	&__error {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transform: translate(0, 100%);
+
+		font-size: rem(14);
+		color: red;
 	}
 }
+
 //</FORM>
 
 // <BUTTONS>

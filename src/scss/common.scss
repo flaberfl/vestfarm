@@ -6,9 +6,9 @@
 }
 
 .title {
-  // font-size: rem(70);
-  @include adaptiveValue("font-size", 70, 45);
+  @include adaptiveValue("font-size", 86, 45);
   font-weight: 600;
+  letter-spacing: .8px;
   line-height: math.div(65, 70);
   color: #fff;
 

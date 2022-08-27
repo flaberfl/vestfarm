@@ -1,9 +1,12 @@
 .intro {
 
-  /* .intro__container */
-  &__container {
+  /* .intro__container_wide */
+  &__container_wide {
     position: relative;
   }
+
+  /* .intro__container */
+  &__container {}
 
   /* .intro__content */
   &__content {
@@ -20,18 +23,21 @@
 
   /* .intro__title */
   &__title {
-    max-width: rem(750);
+    max-width: rem(900);
+
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 70, 30);
+      @include adaptiveValue("margin-bottom", 62, 30);
     }
   }
-  
+
   /* .intro__text */
   &__text {
-    max-width: rem(580);
-    
+    max-width: rem(750);
+
+    font-size: rem(24);
     line-height: 180%;
-    
+    line-height: math.div(32, 24);
+
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 48, 20);
     }
@@ -39,19 +45,61 @@
 
   /* .intro__form */
   &__form {
-    @media (max-width: em(430)){
-       width: 100%; 
-    }
+    width: 100%;
   }
 
   /* .intro__icons */
   &__icons {}
 }
 
-.icons-intro {}
+.icons-intro {
 
-.icons {
+  /* .icons-intro__item */
+  &__item {
+    position: absolute;
 
-  /* .icons__intro */
-  &__intro {}
+    /* .icons-intro__item_1 */
+    &_1 {
+      top: percent(689, 982);
+      // top: 689px;
+      left: 14px;
+    }
+
+    /* .icons-intro__item_2 */
+    &_2 {
+      left: percent(247, 1620);
+      top: percent(383, 982);
+    }
+
+    /* .icons-intro__item_3 */
+    &_3 {
+      left: percent(410, 1620);
+      top: percent(765, 982);
+    }
+
+    /* .icons-intro__item_4 */
+    &_4 {
+      left: percent(1142, 1620);
+      top: percent(135, 982);
+    }
+
+    /* .icons-intro__item_5 */
+    &_5 {
+      left: percent(1315, 1620);
+      top: percent(424, 982);
+    }
+
+    /* .icons-intro__item_6 */
+    &_6 {
+      left: percent(1311, 1620);
+      top: percent(784, 982);
+    }
+
+    /* .icons-intro__item_7 */
+    &_7 {
+      right: 15px;
+      // left: percent(1311, 1620);
+      top: percent(370, 982);
+    }
+  }
 }

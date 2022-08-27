@@ -3,6 +3,7 @@
 .form {
 	display: flex;
 	max-width: rem(533);
+	margin: 0 auto;
 	padding: rem(6);
 	gap: rem(5);
 	position: relative;
@@ -10,8 +11,8 @@
 	border-radius: rem(10);
 	background-color: #fff;
 
-	@media (max-width: em(430)){
-		 flex-direction: column; 
+	@media (max-width: em(430)) {
+		flex-direction: column;
 	}
 
 	&__row {}

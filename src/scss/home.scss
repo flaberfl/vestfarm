@@ -53,6 +53,7 @@
 }
 
 .icons-intro {
+  pointer-events: none;
 
   /* .icons-intro__item */
   &__item {
@@ -61,8 +62,7 @@
     /* .icons-intro__item_1 */
     &_1 {
       top: percent(689, 982);
-      // top: 689px;
-      left: 14px;
+      left: rem(14);
     }
 
     /* .icons-intro__item_2 */
@@ -97,8 +97,7 @@
 
     /* .icons-intro__item_7 */
     &_7 {
-      right: 15px;
-      // left: percent(1311, 1620);
+      right: rem(15);
       top: percent(370, 982);
     }
   }

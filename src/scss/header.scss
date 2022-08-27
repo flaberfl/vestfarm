@@ -29,6 +29,17 @@
     img {
       max-width: 100%;
     }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      @include adaptiveValue("width", 585, 350);
+      @include adaptiveValue("height", 585, 350);
+
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
   }
 
   /* .header__menu */

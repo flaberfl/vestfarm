@@ -10,6 +10,10 @@
 	border-radius: rem(10);
 	background-color: #fff;
 
+	@media (max-width: em(430)){
+		 flex-direction: column; 
+	}
+
 	&__row {}
 
 	&__column {}
@@ -19,6 +23,7 @@
 	&__input {
 		flex: 1 1 auto;
 		padding: rem(20);
+		height: rem(64);
 
 		font-weight: 500;
 		color: #263238;

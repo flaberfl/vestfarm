@@ -9,7 +9,7 @@
   z-index: 10;
 
   /* .header__container-wide */
-  &__container-wide {
+  &__container_wide {
     display: grid;
     grid-template-columns: rem(300) 1fr rem(300);
     align-items: center;

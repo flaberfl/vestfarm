@@ -10,7 +10,6 @@
 
   /* .intro__content */
   &__content {
-    padding: rem(250) 0px 0px 0px;
     @include adaptiveValue("padding-top", 250, 130);
     @include adaptiveValue("padding-bottom", 200, 30);
     display: flex;

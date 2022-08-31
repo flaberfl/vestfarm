@@ -10,6 +10,8 @@
 
   /* .intro__content */
   &__content {
+    position: relative;
+    z-index: 2;
     @include adaptiveValue("padding-top", 250, 130);
     @include adaptiveValue("padding-bottom", 200, 30);
     display: flex;
@@ -53,6 +55,39 @@
 
 .icons-intro {
   pointer-events: none;
+  @media (max-width:$mobile){
+     opacity: 0.5; 
+  }
+
+  &__circle {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    @include adaptiveValue("width", 585, 350);
+    @include adaptiveValue("height", 585, 350);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid #fff;
+    }
+
+    &_1 {
+      &::before {
+        transform: translate(calc(-50% - rem(16)), -35%);
+      }
+    }
+
+    &_2 {
+      &::before {
+        transform: translate(calc(-50% + rem(40)), -45%);
+      }
+    }
+  }
 
   /* .icons-intro__item */
   &__item {

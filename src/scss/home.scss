@@ -13,7 +13,7 @@
     position: relative;
     z-index: 2;
     @include adaptiveValue("padding-top", 250, 130);
-    @include adaptiveValue("padding-bottom", 200, 30);
+    @include adaptiveValue("padding-bottom", 210, 30);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,8 +55,9 @@
 
 .icons-intro {
   pointer-events: none;
-  @media (max-width:$mobile){
-     opacity: 0.5; 
+
+  @media (max-width:$mobile) {
+    opacity: 0.5;
   }
 
   &__circle {
@@ -135,4 +136,29 @@
       top: percent(370, 982);
     }
   }
+}
+
+.page {
+
+  /* .page__partners */
+  &__partners {}
+}
+
+.partners {
+
+  /* .partners__container */
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(25);
+
+    @media (max-width: em(1100)) {
+      justify-content: center;
+    }
+  }
+
+  /* .partners__item */
+  &__item {}
 }

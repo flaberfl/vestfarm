@@ -36,7 +36,6 @@
     max-width: rem(750);
 
     font-size: rem(24);
-    line-height: 180%;
     line-height: math.div(32, 24);
 
     &:not(:last-child) {
@@ -161,4 +160,54 @@
 
   /* .partners__item */
   &__item {}
+}
+
+.page {
+
+  /* .page__how */
+  &__how {}
+}
+
+.how {
+
+  /* .how__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr percent(750, 1420);
+  }
+
+  /* .how__content */
+  &__content {}
+
+  /* .how__title */
+  &__title {}
+
+  /* .how__text */
+  &__text {}
+
+  /* .how__steps */
+  &__steps {}
+
+  /* .how__image */
+  &__image {
+    align-self: start;
+  }
+}
+
+.steps-how {
+
+  /* .steps-how__item */
+  &__item {}
+
+  /* .steps-how__icon */
+  &__icon {}
+
+  /* .steps-how__body */
+  &__body {}
+
+  /* .steps-how__title */
+  &__title {}
+
+  /* .steps-how__text */
+  &__text {}
 }

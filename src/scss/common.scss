@@ -5,15 +5,28 @@
   &__intro {}
 }
 
+.page {
+
+  /* .page__partners */
+  &__partners {}
+}
+
+.page {
+
+  /* .page__how */
+  &__how {}
+}
+
 .title {
-  @include adaptiveValue("font-size", 86, 45);
+  @include adaptiveValue("font-size", 68, 45);
   font-weight: 600;
-  letter-spacing: .8px;
-  line-height: math.div(65, 70);
+  line-height: math.div(78, 68);
   color: #fff;
 
-  &_64 {
-    @include adaptiveValue("font-size", 80, 40);
+  &_s64 {
+    @include adaptiveValue("font-size", 64, 40);
+    line-height: math.div(72, 64);
+    font-weight: 700;
   }
 
   span {
@@ -27,15 +40,42 @@
 }
 
 .image-block {
+  position: relative;
   background: rgba(255, 255, 255, 0.05);
   @include adaptiveValue("padding-top", 166, 30);
   @include adaptiveValue("padding-bottom", 166, 30);
   @include adaptiveValue("padding-left", 45, 30);
   @include adaptiveValue("padding-right", 45, 30);
   border-radius: 20px;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    @include adaptiveValue("width", 585, 350);
+    @include adaptiveValue("height", 585, 350);
+    top: 0;
+    right: 0;
+
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+  }
+
+  &::before {
+    transform: translate(calc(50% - rem(20)), -20%);
+  }
+
+  &::after {
+    transform: translate(calc(50% - rem(20)), -6%);
+  }
 
   &__item {
-    flex: 1 1 100%;
+    position: relative;
+
+    text-align: center;
+    z-index: 2;
 
     img {
       max-width: 100%;

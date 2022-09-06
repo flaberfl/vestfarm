@@ -12,8 +12,8 @@
   &__content {
     position: relative;
     z-index: 2;
-    @include adaptiveValue("padding-top", 250, 130);
-    @include adaptiveValue("padding-bottom", 210, 30);
+    @include adaptiveValue("padding-top", 256, 130);
+    @include adaptiveValue("padding-bottom", 210, 50);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +26,9 @@
   &__title {
     max-width: rem(900);
 
+    font-weight: 700;
+    letter-spacing: 2.1px;
+
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 62, 30);
     }
@@ -35,8 +38,7 @@
   &__text {
     max-width: rem(750);
 
-    font-size: rem(24);
-    line-height: math.div(32, 24);
+    line-height: math.div(32, 18);
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 48, 20);
@@ -137,13 +139,9 @@
   }
 }
 
-.page {
-
-  /* .page__partners */
-  &__partners {}
-}
 
 .partners {
+  @include adaptiveValue("padding-bottom", 198, 50);
 
   /* .partners__container */
   &__container {
@@ -162,28 +160,37 @@
   &__item {}
 }
 
-.page {
-
-  /* .page__how */
-  &__how {}
-}
-
 .how {
 
   /* .how__container */
   &__container {
     display: grid;
-    grid-template-columns: 1fr percent(750, 1420);
+    row-gap: rem(30);
+
+    @media (min-width:$tablet) {
+      grid-template-columns: 1fr percent(750, 1420);
+    }
   }
 
+
   /* .how__content */
-  &__content {}
+  &__content {
+    @include adaptiveValue("padding-right", 96, 30);
+  }
 
   /* .how__title */
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
 
   /* .how__text */
-  &__text {}
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
 
   /* .how__steps */
   &__steps {}
@@ -197,16 +204,49 @@
 .steps-how {
 
   /* .steps-how__item */
-  &__item {}
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(32);
+    max-width: rem(490);
+
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   /* .steps-how__icon */
-  &__icon {}
+  &__icon {
+    display: flex;
+    flex: 0 0 rem(110);
+    height: rem(110);
+    width: rem(110);
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 128, 0, 0.1);
+    border-radius: 50%;
+  }
 
   /* .steps-how__body */
   &__body {}
 
   /* .steps-how__title */
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    font-size: rem(20);
+    font-weight: 700;
+
+  }
 
   /* .steps-how__text */
   &__text {}

@@ -55,6 +55,11 @@
 }
 
 .icons-intro {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   pointer-events: none;
 
   @media (max-width:$mobile) {
@@ -138,7 +143,6 @@
     }
   }
 }
-
 
 .partners {
   @include adaptiveValue("padding-bottom", 198, 50);
@@ -249,7 +253,6 @@
 
     font-size: rem(20);
     font-weight: 700;
-
   }
 
   /* .steps-how__text */

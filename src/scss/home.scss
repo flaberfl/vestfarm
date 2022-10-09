@@ -144,6 +144,9 @@
   }
 }
 
+//========================================================================================================================================================
+
+
 .partners {
   @include adaptiveValue("padding-bottom", 198, 50);
 
@@ -163,6 +166,9 @@
   /* .partners__item */
   &__item {}
 }
+
+//========================================================================================================================================================
+
 
 .how {
   @include adaptiveValue("padding-bottom", 100, 25);
@@ -257,4 +263,109 @@
 
   /* .steps-how__text */
   &__text {}
+}
+
+//========================================================================================================================================================
+
+
+.pathway {
+  @include adaptiveValue("padding-top", 100, 25);
+  @include adaptiveValue("padding-bottom", 100, 25);
+
+  /* .pathway__container */
+  &__container {
+    /* .pathway__container_wide */
+    display: grid;
+    row-gap: rem(30);
+
+    @media (min-width:$tablet) {
+      grid-template-columns: percent(694, 1420) 1fr;
+    }
+  }
+
+  /* .pathway__image */
+  &__image {
+    @include adaptiveValue("padding-top", 96, 30);
+    // @include adaptiveValue("padding-bottom", 166, 30);
+
+    // @include adaptiveValue("padding-left", 38, 10);
+    // @include adaptiveValue("padding-right", 38, 10);
+    // text-align: center;
+
+    .image-block__circle {
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+    }
+
+    .image-block__circle_1 {
+      &::before {
+        transform: translate(calc(-50% + rem(20)), 20%);
+      }
+    }
+
+    .image-block__circle_2 {
+      &::before {
+        transform: translate(calc(-50% + rem(20)), 6%);
+      }
+    }
+  }
+
+  /* .pathway__content */
+  &__content {
+    @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
+
+  }
+
+  /* .pathway__title */
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  /* .pathway__text */
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+
+  /* .pathway__spollers */
+  &__spollers {}
+
+}
+
+//========================================================================================================================================================
+
+.spollers-pathway {
+
+  /* .spollers-pathway__item */
+  &__item {}
+
+  /* .spollers-pathway__title */
+  &__title {
+    padding: rem(24) rem(30);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: rem(24);
+    line-height: 177%;
+
+    &::after {
+      content: '';
+
+      background: url('@img/arrow-down.svg') center no-repeat;
+      flex: 0 0 rem(24);
+      height: 24px;
+    }
+  }
+
+  /* .spollers-pathway__body */
+  &__body {}
 }

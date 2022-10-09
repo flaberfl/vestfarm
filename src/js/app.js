@@ -39,7 +39,7 @@
   Документация: https://template.fls.guru/template-docs/modul-spojlery.html
   Сниппет (HTML): spollers
   */
-  // flsFunctions.spollers();
+  flsFunctions.spollers();
 
   /*
   Модуль работы с табами
@@ -172,7 +172,10 @@
   // Модуль Параллакс-эффект при скролле страницы
   // Документация: 
   // Сниппет(HTML):
-  import './libs/parallax.js'
+
+  // data-prlx-parent - вешаем на родителя, можно на section
+  // data-coefficient="100" data-prlx data-direction="1" - вешаем на элемент
+  // import './libs/parallax.js'
 
   // Модуль поэкранного скролла
   // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html

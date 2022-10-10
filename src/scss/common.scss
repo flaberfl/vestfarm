@@ -24,8 +24,8 @@
 }
 
 .title {
-  @include adaptiveValue("font-size", 68, 45);
-  font-weight: 600;
+  @include adaptiveValue("font-size", 70, 45);
+  font-weight: 700;
   line-height: math.div(78, 68);
   color: #fff;
 

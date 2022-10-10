@@ -339,6 +339,8 @@
 //========================================================================================================================================================
 
 .spollers-pathway {
+  display: grid;
+  row-gap: rem(24);
 
   /* .spollers-pathway__item */
   &__item {
@@ -349,7 +351,6 @@
 
   /* .spollers-pathway__title */
   &__title {
-
     padding: rem(24) rem(30);
     width: 100%;
     display: flex;

@@ -143,8 +143,7 @@
 
 //========================================================================================================================================================
 
-
-.partners {
+.partners {  
   @include adaptiveValue("padding-bottom", 198, 50);
 
   /* .partners__container */
@@ -207,9 +206,7 @@
   &__steps {}
 
   /* .how__image */
-  &__image {
-    align-self: start;
-  }
+  &__image {}
 }
 
 .steps-how {
@@ -271,8 +268,7 @@
 
   /* .pathway__container */
   &__container {
-    /* .pathway__container_wide */
-    display: grid;
+    display: flex;
     row-gap: rem(30);
 
     @media (min-width:$tablet) {
@@ -283,11 +279,7 @@
   /* .pathway__image */
   &__image {
     @include adaptiveValue("padding-top", 96, 30);
-    // @include adaptiveValue("padding-bottom", 166, 30);
-
-    // @include adaptiveValue("padding-left", 38, 10);
-    // @include adaptiveValue("padding-right", 38, 10);
-    // text-align: center;
+    @include adaptiveValue("padding-bottom", 108, 30);
 
     .image-block__circle {
       top: auto;
@@ -312,7 +304,7 @@
   /* .pathway__content */
   &__content {
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
-
+    flex: 1 1 100;
   }
 
   /* .pathway__title */
@@ -327,13 +319,17 @@
   /* .pathway__text */
   &__text {
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 48, 30);
+      @include adaptiveValue("margin-bottom", 44, 30);
     }
+  }
+
+  &__title,
+  &__text {
+    max-width: rem(550);
   }
 
   /* .pathway__spollers */
   &__spollers {}
-
 }
 
 //========================================================================================================================================================
@@ -359,8 +355,9 @@
 
     background-color: transparent;
     border-radius: rem(10);
-    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 18);
     line-height: 177%;
+    text-align: left;
 
     &::after {
       content: '';

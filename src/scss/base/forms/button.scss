@@ -2,19 +2,18 @@
 // Снипет (HTML): btn
 
 .button {
-	padding: rem(21) rem(25);
+	padding: rem(22) rem(25);
 
 	border-radius: rem(10);
 	background-color: $green-color;
 
-	font-family: Lato;
 	font-weight: 500;
 	line-height: math.div(22, 18);
 	transition: all 0.3s ease 0s;
 
-	@media (min-width:$tablet) {
-		min-width: rem(142);
-	}
+	// @media (min-width:$tablet) {
+	// 	min-width: rem(142);
+	// }
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -44,3 +43,4 @@
 		}
 	}
 }
+

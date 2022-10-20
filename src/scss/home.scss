@@ -143,7 +143,7 @@
 
 //========================================================================================================================================================
 
-.partners {  
+.partners {
   @include adaptiveValue("padding-bottom", 198, 50);
 
   /* .partners__container */
@@ -271,15 +271,21 @@
     display: flex;
     row-gap: rem(30);
 
-    @media (min-width:$tablet) {
-      grid-template-columns: percent(694, 1420) 1fr;
+    @media (max-width:$tablet) {
+      flex-direction: column-reverse;
     }
   }
 
   /* .pathway__image */
   &__image {
+    flex: 0 0 percent(694, 1420);
     @include adaptiveValue("padding-top", 96, 30);
     @include adaptiveValue("padding-bottom", 108, 30);
+
+    @media (max-width:$tablet) {
+      align-self: stretch;
+    }
+
 
     .image-block__circle {
       top: auto;
@@ -303,8 +309,8 @@
 
   /* .pathway__content */
   &__content {
+    flex: 1 1 auto;
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
-    flex: 1 1 100;
   }
 
   /* .pathway__title */
@@ -325,7 +331,9 @@
 
   &__title,
   &__text {
-    max-width: rem(550);
+    @media (min-width:$tablet) {
+      @include adaptiveValue("padding-right", 30, 10, 1420, 992, 2);
+    }
   }
 
   /* .pathway__spollers */
@@ -352,6 +360,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: rem(10);
 
     background-color: transparent;
     border-radius: rem(10);
@@ -379,5 +388,9 @@
   /* .spollers-pathway__body */
   &__body {
     padding: 0 rem(30) rem(24) rem(30);
+
+    @media (max-width:$mobileSmall) {
+      padding: 0 rem(20) rem(18) rem(20);
+    }
   }
 }

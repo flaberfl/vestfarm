@@ -268,22 +268,30 @@
 
   /* .pathway__container */
   &__container {
-    display: flex;
+    // display: flex;
+    display: grid;
     row-gap: rem(30);
 
+
+
+    @media (min-width:$tablet) {
+      grid-template-columns: percent(694, 1420) 1fr;
+    }
+
     @media (max-width:$tablet) {
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
     }
   }
 
   /* .pathway__image */
   &__image {
-    flex: 0 0 percent(694, 1420);
+    // flex: 0 0 percent(694, 1420);
     @include adaptiveValue("padding-top", 96, 30);
     @include adaptiveValue("padding-bottom", 108, 30);
 
     @media (max-width:$tablet) {
-      width: 100%;
+      // width: 100%;
+      grid-row-start: 2;
     }
 
 
@@ -309,7 +317,7 @@
 
   /* .pathway__content */
   &__content {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
   }
 
@@ -452,8 +460,8 @@
   &__button {
     min-width: rem(222);
 
-    @media (max-width:$mobileSmall){
-       width: 100%; 
+    @media (max-width:$mobileSmall) {
+      width: 100%;
     }
   }
 

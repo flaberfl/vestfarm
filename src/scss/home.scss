@@ -5,19 +5,15 @@
     position: relative;
   }
 
-  /* .intro__container */
-  &__container {}
-
   /* .intro__content */
   &__content {
     position: relative;
     z-index: 2;
     @include adaptiveValue("padding-top", 250, 130);
     @include adaptiveValue("padding-bottom", 210, 50);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    display: grid;
+    justify-items: center;
 
     text-align: center;
   }
@@ -45,6 +41,7 @@
   /* .intro__form */
   &__form {
     width: 100%;
+    // justify-self: center;
   }
 
   /* .intro__icons */
@@ -605,7 +602,7 @@
 
 .download {
   @include adaptiveValue("padding-top", 99, 25);
-  @include adaptiveValue("padding-bottom", 100, 25);
+  @include adaptiveValue("padding-bottom", 200, 50);
 
   /* .download__container */
   &__container {}

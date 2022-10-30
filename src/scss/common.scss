@@ -23,6 +23,12 @@
   &__pathway {}
 }
 
+.page {
+  /* .page__download */
+  &__download {
+  }
+}
+
 .title {
   @include adaptiveValue("font-size", 70, 45);
   font-weight: 700;

@@ -175,7 +175,7 @@
 
   // data-prlx-parent - вешаем на родителя, можно на section
   // data-coefficient="100" data-prlx data-direction="1" - вешаем на элемент
-  // import './libs/parallax.js'
+  import './libs/parallax.js'
 
   // Модуль поэкранного скролла
   // Документация: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html

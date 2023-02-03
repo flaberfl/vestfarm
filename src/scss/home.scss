@@ -614,8 +614,11 @@
     @include adaptiveValue("padding-bottom", 64, 26);
     @include adaptiveValue("padding-left", 30, 20);
     @include adaptiveValue("padding-right", 30, 20);
-    display: grid;
-    justify-items: center;
+
+    @media (min-width:$mobileSmall) {
+      display: grid;
+      justify-items: center;
+    }
 
     background: rgba(255, 255, 255, .07);
     border-radius: rem(20);
